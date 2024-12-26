@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Webpage Example</title>
+    <title>Interactive One-Page Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Interactive Page</h1>
-    <button id="changeTextBtn">Change Text</button>
-    <p id="dynamicText">This text will change when you click the button.</p>
 
-    <script>
-        // JavaScript to make the webpage interactive
-        document.getElementById('changeTextBtn').addEventListener('click', function() {
-            document.getElementById('dynamicText').textContent = 'The text has been changed!';
-        });
-    </script>
+    <!-- Top Bar Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><button class="nav-button" onclick="scrollToSection('home')">Home</button></li>
+            <li><button class="nav-button" onclick="scrollToSection('projects')">Projects</button></li>
+            <li><button class="nav-button" onclick="scrollToSection('about')">About</button></li>
+            <li><button class="nav-button" onclick="scrollToSection('contact')">Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="section">
+        <h1>Home Section</h1>
+        <p>Welcome to the Home section of this interactive website.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h1>Projects Section</h1>
+        <p>Here are some projects I've worked on:</p>
+        <ul>
+            <li>Project 1: Website Design</li>
+            <li>Project 2: Web App Development</li>
+            <li>Project 3: Machine Learning Model</li>
+        </ul>
+    </section>
+
+    <section id="about" class="section">
+        <h1>About Section</h1>
+        <p>This is the About section. Learn more about me and my background.</p>
+        <p>I am a full-stack developer with experience in web technologies, including HTML, CSS, JavaScript, and more. I specialize in building interactive and scalable web applications.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>Contact Section</h1>
+        <p>If you want to get in touch, you can email me at <a href="mailto:example@example.com">example@example.com</a>.</p>
+    </section>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
