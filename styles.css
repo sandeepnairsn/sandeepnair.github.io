@@ -77,7 +77,7 @@ footer {
     border-radius: 50%;
     transition: 0.3s;
 }
-
+ 
 .menu:hover .dot {
     background-color: #0055cc;
 }
