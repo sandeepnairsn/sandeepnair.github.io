@@ -18,4 +18,4 @@ menuDots.addEventListener('mouseenter', () => {
 
 menuDots.addEventListener('mouseleave', () => {
     menuDots.style.transform = 'scale(1)';
-}); 
+});  
