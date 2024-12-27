@@ -14,7 +14,7 @@ body, html {
     padding: 20px;
 }
 
-/* Navbar styling - Center buttons horizontally */
+/* Navbar styling - Flexbox to center and space buttons evenly */
 .navbar {
     position: fixed;
     top: 0;
@@ -22,11 +22,11 @@ body, html {
     background-color: #333;
     padding: 10px;
     z-index: 1000;
-    text-align: center;  /* Center the navigation buttons */
 }
 
 .navbar ul {
-    display: inline-block; /* Center the ul */
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -34,7 +34,6 @@ body, html {
 
 .navbar li {
     margin: 0 15px; /* Space between buttons */
-    display: inline-block; /* Make buttons inline */
 }
 
 .navbar .nav-button {
@@ -95,7 +94,7 @@ ul li {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #000; /* Black background for the footer */
     color: white;
     position: fixed;
     bottom: 0;
