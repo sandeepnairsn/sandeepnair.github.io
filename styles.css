@@ -1,108 +1,83 @@
-/* styles.css */
-
-/* General styling */
-body, html {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    background-color: white;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
-.app-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Navbar styling - Flexbox to center and space buttons evenly */
-.navbar {
+#navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
-    z-index: 1000;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: space-between; /* Space buttons evenly */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar li {
-    margin: 0 15px; /* Space between buttons */
-}
-
-.navbar .nav-button {
-    background-color: #444;
-    color: white;
-    border: none;
+    left: 0;
+    right: 0;
+    background-color: #003366;
     padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    z-index: 10;
 }
 
-.navbar .nav-button:hover {
-    background-color: #555;
-}
-
-/* Section styling */
-.section {
-    padding: 100px 20px;
-    margin-top: 60px; /* To account for the fixed navbar */
-    height: 100vh;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-#home {
-    background-color: #f0f0f0;
-}
-
-#projects {
-    background-color: #e0e0e0;
-}
-
-#about {
-    background-color: #d0d0d0;
-}
-
-#contact {
-    background-color: #c0c0c0;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-ul {
+#navbar ul {
+    display: flex;
     list-style-type: none;
-    padding: 0;
+    justify-content: center;
 }
 
-ul li {
-    font-size: 20px;
-    margin: 10px 0;
+#navbar ul li {
+    margin: 0 15px;
 }
 
-/* Footer styling */
-.footer {
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+#navbar ul li a:hover {
+    background-color: #0055cc;
+    border-radius: 5px;
+}
+
+#home, #projects, #about, #contact {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+section {
+    padding: 50px 0;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
     text-align: center;
     padding: 20px;
-    background-color: #000; /* Black background for the footer */
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-.footer p {
-    margin: 0;
-    font-size: 16px;
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
 }
- 
+
+.menu .dot {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: #003366;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.menu:hover .dot {
+    background-color: #0055cc;
+}
