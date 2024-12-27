@@ -1,9 +1,21 @@
-// scripts.js
+// Smooth scrolling when menu items are clicked
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-// Function to scroll to a specific section when the user clicks a button
-function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
+// Toggle menu dots on hover
+const menuDots = document.getElementById('menu');
+menuDots.addEventListener('mouseenter', () => {
+    menuDots.style.transform = 'scale(1.1)';
+});
+
+menuDots.addEventListener('mouseleave', () => {
+    menuDots.style.transform = 'scale(1)';
+});
